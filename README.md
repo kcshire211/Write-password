@@ -1,1 +1,5 @@
-# Write-password
+## I started off by working on the .js file and adding an alert and four prompts. The alert spells out the password requirements for a secure password. The series of prompts gives the user the option to include if they want to use a capital letter, number, and special character. There is also a prompt for password length, choosing between 8-128 characters. 
+
+## I then created a series of functions that would generate the random assortment of upper/lower case letters, numbers, and special characters that I included from those available on my keyboard. 
+
+## Scheduling conflicts and illness this week have left me without a completed homework assignment. I'm aware that what I've turned in is incomplete and not functioning. I plan to work on this assignment to completion. I would love feedback on some things I'm missing or needing to do to complete. I'll be working with my tutor next week on this as well. 
