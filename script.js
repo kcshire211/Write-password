@@ -6,18 +6,39 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   alert("Password must be between 8-128 characters. A secure password may contain at least one capital letter, number, and one special character.");
   prompt("Choose a number of characters between 8-128 in length.");
-  prompt("Enter YES if you would like to include a capital letter.");
-  prompt("Enter YES if you would like to include a number.");
-  prompt("Enter YES if you would like to include a special character.");
+  prompt("Use a capital letter? Yes or No.");
+  prompt("Use a number? Yes or No.");
+  prompt("Use a special character? Yes or No.");
   
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  
-  
-  
-  passwordText.value = password;
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+    
+    passwordText.value = password;
+  }
 
-}
+  const randomFunc = {
+    lower: getRandomLower,
+    upper: getRandomUpper,
+    number: getRandomNumber,
+    Symbol: getRandomSymbol
+  };
+  
+  function getRandomLower(){
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+  }
+
+  function getRandomUpper(){
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+  }
+
+  function getRandomNumber(){
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+  }
+
+  function getRandomSymbol(){
+    const symbols = "!@#$%^&*()[]{}<>?,./=+-_`~"
+    return symbols[Math.floor(Math.random() * symbols.length)]
+  }
 
 
 // Add event listener to generate button
@@ -25,9 +46,4 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-
-
-//add a series of prompts for the password criteria. refer to the RPS game we did before
-//prompt for each: length 8-128, special character, confirm if you want special char, upper/lower
-//when done with prompts, password either displayed in page or in alert
 
